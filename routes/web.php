@@ -153,7 +153,7 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/index', 'UserController@index')->name('index');
 
     //request barang (user)
-    Route::get('/request/barang', "UserController@request");
+    Route::get('/request/barang', "UserController@request")->name("request.barang");
 
     //keranjang (user)
     Route::get('/keranjang', "UserController@keranjang");

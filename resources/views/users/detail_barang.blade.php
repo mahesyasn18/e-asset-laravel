@@ -13,7 +13,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{/request/barang}}" class="btn btn-dark"><i class="fa fa-arrow-circle-left"
+                    <a href="{{route('request.barang')}}" class="btn btn-dark"><i class="fa fa-arrow-circle-left"
                             aria-hidden="true"></i>
                         Kembali</a>
                     @if (Session::has("changed"))
