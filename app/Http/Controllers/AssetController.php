@@ -323,7 +323,7 @@ class AssetController extends Controller
                     if (empty($nama_barang) || empty($kategori_id) || empty($stok) || empty($sumber) || empty($penyimpanan) || empty($tanggal_masuk) || empty($harga_satuan)) {
                         return redirect()->back()->with("empty", "Semua kolom harus diisi!");
                     } else {
-                        if (Barang::where("nama_barang", $nama_barang)) {
+                        if (Barang::where("nama_barang", $nama_barang)->first()) {
                             return redirect()->back()->with("empty", "Nama barang sudah Ada");
                         } else {
                             $barang = Barang::create([

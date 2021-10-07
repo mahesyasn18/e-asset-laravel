@@ -162,7 +162,8 @@
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalupload">Upload
                                 Massal (Excel)</a>
                             <a class="dropdown-item"
-                                href="{{ asset("download/Template For Create Item(Barang).xlsx") }}">Download Template
+                                href="{{ asset("download/Template For Create Item(Barang_Assets).xlsx") }}">Download
+                                Template
                                 (Excel)</a>
                         </div>
                     </div>
