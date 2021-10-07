@@ -293,7 +293,7 @@ class GuruController extends Controller
                 if (empty($name) || empty($username) || empty($password) || empty($nip) || empty($jurusan_id)) {
                     return redirect()->back()->with("empty", "Kolom pada excel tidak boleh kosong!");
                 } else {
-                    if (User::where("username", $username)) {
+                    if (User::where("username", "=", $username)->where("nomor_induk", "=", $nomor_induk)->first()) {
                         return redirect()->back()->with("username", "Username sudah ada!");
                     } else {
                         $user = User::create([

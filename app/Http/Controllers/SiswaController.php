@@ -327,7 +327,7 @@ class SiswaController extends Controller
                     if (empty($name) || empty($username) || empty($password) || empty($nomor_induk) || empty($tahunajaran) || empty($kelas)) {
                         return redirect()->back()->with("empty", "Kolom pada excel tidak boleh kosong!");
                     } else {
-                        if (User::where("username", "==", $username)->where("nomor_induk", "==", $nomor_induk) == True) {
+                        if (User::where("username", "=", $username)->where("nomor_induk", "=", $nomor_induk)->first()) {
                             return redirect()->back()->with("username", "Username sudah ada!");
                         } else {
                             $user = User::create([
